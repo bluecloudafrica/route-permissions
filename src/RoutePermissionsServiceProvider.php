@@ -29,5 +29,9 @@ class RoutePermissionsServiceProvider extends ServiceProvider
             __DIR__ . '/config/route_permissions.php' => config_path('route_permissions.php'),
         ]);
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+
+        $this->publishes([
+            __DIR__.'/database/migrations/' => database_path('migrations')
+        ], 'migrations');
     }
 }

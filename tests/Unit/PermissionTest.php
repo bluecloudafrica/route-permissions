@@ -6,8 +6,9 @@ namespace Bluecloud\RoutePermissions\Tests\Unit;
 use Bluecloud\RoutePermissions\Models\Permission;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
+use Tests\TestCase;
 
-class PermissionTest extends \Tests\TestCase
+class PermissionTest extends TestCase
 {
     public function test_allows_method()
     {
@@ -34,5 +35,4 @@ class PermissionTest extends \Tests\TestCase
         $this->assertTrue($permission->allows($request));
         $this->assertFalse($controlPermission->allows($request));
     }
-
 }
