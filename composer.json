@@ -1,0 +1,33 @@
+{
+    "name": "bluecloud/route-permissions",
+    "description": "Laravel route based permission system",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BlueCloud Solutions",
+            "email": "info@bluecloud.africa"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "bluecloud/response-builder": "^v1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluecloud\\RoutePermissions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bluecloud\\RoutePermissions\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bluecloud\\RoutePermissions\\RoutePermissionsServiceProvider"
+            ]
+        }
+    }
+}
