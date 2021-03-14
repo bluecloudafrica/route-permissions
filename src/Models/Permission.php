@@ -28,4 +28,13 @@ class Permission extends Model
     {
         return PermissionFactory::new();
     }
+
+    public static function createFor(string $name, string $uri, string $method): self
+    {
+        return static::create([
+            'name' => $name,
+            'route' => $uri,
+            'method' => $method
+        ]);
+    }
 }
