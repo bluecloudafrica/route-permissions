@@ -2,6 +2,7 @@
 
 namespace Bluecloud\RoutePermissions\Models;
 
+use Bluecloud\RoutePermissions\Factories\PermissionFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -21,5 +22,10 @@ class Permission extends Model
     public function allows(Request $request): bool
     {
         return $this->{'method'} == $request->method() && $this->{'route'} == $request->route()->uri;
+    }
+
+    public static function newFactory(): PermissionFactory
+    {
+        return PermissionFactory::new();
     }
 }
