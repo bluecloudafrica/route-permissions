@@ -28,6 +28,6 @@ class CreateRpPermissionRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permission_role');
+        Schema::dropIfExists('rp_permission_role');
     }
 }
